@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap");
+:root {
+    --primary: #f5edce;
+    --secondary: #89c4e1;
+    --teritary: #58287f;
+    --accent: #1a0000;
+
+    --border: 0.1rem solid #58287f;
+    --borderRadius: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Dosis", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
