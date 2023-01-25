@@ -21,19 +21,23 @@ const Board = ({ boardSize }: Props) => {
     console.log(board);
 
     const boardStyle = {
-        gridTemplateColumns: `repeat(1fr, ${boardSize})`,
-        gridTemplateRows: `repeat(1fr, ${boardSize})`,
+        gridTemplateColumns: `repeat(${boardSize}, 1fr)`,
+        gridTemplateRows: `repeat(${boardSize}, 1fr)`,
     };
 
     return (
-        <div className="board">
-            {board.map((row, index) => {
+        <div className="board" style={boardStyle}>
+            {board.map((row, i) => {
                 return (
-                    <>
-                        {row.map((cell, index) => {
-                            return <div className="cell">{cell}</div>;
+                    <React.Fragment key={i}>
+                        {row.map((cell, j) => {
+                            return (
+                                <div className="cell" key={j}>
+                                    {cell}
+                                </div>
+                            );
                         })}
-                    </>
+                    </React.Fragment>
                 );
             })}
         </div>

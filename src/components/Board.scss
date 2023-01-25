@@ -5,8 +5,6 @@ div.board {
     place-content: center;
     place-items: center;
     gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     div.cell {
         background-color: var(--secondary);
         width: 100%;
